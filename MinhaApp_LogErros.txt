@@ -1,0 +1,5 @@
+22/07/2025 18:33:52 - Erro na rotina MinhaRotinaQuePodeGerarErro - Número: 3704 | Descrição: Operação não permitida quando o objeto está fechado. | Fonte: ADODB.Recordset | ÚltimaDLL: C:\WINDOWS\HELP\ADO270.CHM | Contexto: Linha do erro/Estado da aplicação
+22/07/2025 18:35:45 - Erro na rotina MinhaRotinaQuePodeGerarErro - Número: 3704 | Descrição: Operação não permitida quando o objeto está fechado. | Fonte: ADODB.Recordset | ÚltimaDLL: C:\WINDOWS\HELP\ADO270.CHM | Contexto: Linha do erro/Estado da aplicação
+22/07/2025 18:37:53 - Erro na rotina MinhaRotinaQuePodeGerarErro - Número: 11 | Descrição: Division by zero | Fonte: Project1 | ÚltimaDLL: C:\WINDOWS\Help\VBENLR98.CHM | Contexto: Linha do erro/Estado da aplicação
+22/07/2025 18:39:21 - Erro na rotina MinhaRotinaQuePodeGerarErro - Número: 0 | Descrição:  | Fonte:  | ÚltimaDLL:  | Contexto: Linha do erro/Estado da aplicação
+22/07/2025 18:40:02 - Erro na rotina MinhaRotinaQuePodeGerarErro - Número: 0 | Descrição:  | Fonte:  | ÚltimaDLL:  | Contexto: Linha do erro/Estado da aplicação
