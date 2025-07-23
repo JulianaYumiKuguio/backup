@@ -9,6 +9,7 @@ Begin VB.MDIForm frm_Principal
    ClientWidth     =   10080
    LinkTopic       =   "MDIForm1"
    Moveable        =   0   'False
+   Picture         =   "MDIForm1.frx":0000
    StartUpPosition =   1  'CenterOwner
    WindowState     =   2  'Maximized
    Begin VB.Menu frmCadastro 
@@ -31,8 +32,39 @@ Private Sub frmCadastro_Click()
     frm_CadastroTransacoes.Show
 End Sub
 
+Private Sub frmConsulta_Click()
+    frm_Consulta.Show
+End Sub
+
+Private Sub frmRelatorio_Click()
+    frm_Relatorio.Show
+End Sub
+
 Private Sub MDIForm_Activate()
-    Call AbreConexaoBD
+On Error GoTo TratamentoDeErro
+
+ ' Call AbreConexaoBD
+    
+    
+    
+Exit Sub
+TratamentoDeErro:
+    ' Monta a mensagem de log com detalhes do erro
+    Dim strErroDetails As String
+    strErroDetails = "Erro na rotina MinhaRotinaQuePodeGerarErro - " & _
+                     "Número: " & Err.Number & " | " & _
+                     "Descrição: " & Err.Description & " | " & _
+                     "Fonte: " & Err.Source & " | " & _
+                     "ÚltimaDLL: " & Err.HelpFile & " | " & _
+                     "Contexto: Linha do erro/Estado da aplicação" ' Adicione contexto se possível
+
+    ' Chama a rotina de log do módulo1
+    Call EscreverLogErro(strErroDetails)
+
+    ' Opcional: Avisar o usuário de forma amigável (sem mostrar detalhes técnicos)
+    MsgBox "Ocorreu um erro inesperado. O problema foi registrado e será investigado.", vbCritical, "Erro"
+
+
 End Sub
 
 Sub AbreConexaoBD()
@@ -69,7 +101,7 @@ Do While Not EOF(f)
         Line Input #f, linha
     End If
 Loop
-  
+
 
 Close #f
 
@@ -78,13 +110,15 @@ Close #f
 ' Variável de acesso a Tabela do BD
  Dim rs As New ADODB.Recordset
 
+
     cn.Provider = "SQLOLEDB"    ' Provedor de acesso ao SQL Server
     cn.Properties("Data Source").Value = xServer
     cn.Properties("Initial Catalog").Value = xDataBase
     cn.Properties("User ID").Value = xUserName
     cn.Properties("Password").Value = xPassword
+    If rs.State = adStateOpen Then rs.Close
     cn.Open  ' Abrindo a conexão
-   
+
     Set rs = New ADODB.Recordset
     Set rs.ActiveConnection = cn
 
@@ -92,4 +126,8 @@ Exit Sub
 
 trata_erro:
 MsgBox Err.Description
+End Sub
+
+Private Sub teste_Click()
+    Form1.Show
 End Sub

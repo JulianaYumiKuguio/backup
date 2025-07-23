@@ -1,93 +1,18 @@
 VERSION 5.00
-Object = "{6B7E6392-850A-101B-AFC0-4210102A8DA7}#1.3#0"; "COMCTL32.OCX"
-Begin VB.Form frm_CadastroTransacoes 
+Begin VB.Form frm_Relatorio 
+   BackColor       =   &H00FFFFFF&
    BorderStyle     =   1  'Fixed Single
-   Caption         =   "Cadastro Transações"
-   ClientHeight    =   7020
+   Caption         =   "Relatório Transações"
+   ClientHeight    =   4980
    ClientLeft      =   3750
    ClientTop       =   3195
-   ClientWidth     =   7845
-   Icon            =   "frm_CadastroTransacoes.frx":0000
+   ClientWidth     =   7710
+   Icon            =   "frm_Relatorio.frx":0000
    MaxButton       =   0   'False
    MDIChild        =   -1  'True
    MinButton       =   0   'False
-   ScaleHeight     =   7020
-   ScaleWidth      =   7845
-   Begin ComctlLib.Toolbar Toolbar1 
-      Align           =   1  'Align Top
-      Height          =   900
-      Left            =   0
-      TabIndex        =   6
-      Top             =   0
-      Width           =   7845
-      _ExtentX        =   13838
-      _ExtentY        =   1588
-      ButtonWidth     =   1085
-      ButtonHeight    =   1429
-      Appearance      =   1
-      ImageList       =   "ImageList1"
-      _Version        =   327682
-      BeginProperty Buttons {0713E452-850A-101B-AFC0-4210102A8DA7} 
-         NumButtons      =   7
-         BeginProperty Button1 {0713F354-850A-101B-AFC0-4210102A8DA7} 
-            Caption         =   "Novo"
-            Key             =   "Novo"
-            Object.ToolTipText     =   "Novo/Limpar Dados"
-            Object.Tag             =   ""
-            ImageIndex      =   1
-         EndProperty
-         BeginProperty Button2 {0713F354-850A-101B-AFC0-4210102A8DA7} 
-            Object.Tag             =   ""
-            Style           =   3
-            MixedState      =   -1  'True
-         EndProperty
-         BeginProperty Button3 {0713F354-850A-101B-AFC0-4210102A8DA7} 
-            Caption         =   "Salvar"
-            Key             =   "Salvar"
-            Object.ToolTipText     =   "Salvar Dados"
-            Object.Tag             =   ""
-            ImageIndex      =   2
-         EndProperty
-         BeginProperty Button4 {0713F354-850A-101B-AFC0-4210102A8DA7} 
-            Object.Tag             =   ""
-            Style           =   3
-            MixedState      =   -1  'True
-         EndProperty
-         BeginProperty Button5 {0713F354-850A-101B-AFC0-4210102A8DA7} 
-            Caption         =   "Excluir"
-            Key             =   "Excluir"
-            Object.ToolTipText     =   "Excluir Dados"
-            Object.Tag             =   ""
-            ImageIndex      =   3
-         EndProperty
-         BeginProperty Button6 {0713F354-850A-101B-AFC0-4210102A8DA7} 
-            Object.Tag             =   ""
-            Style           =   3
-            MixedState      =   -1  'True
-         EndProperty
-         BeginProperty Button7 {0713F354-850A-101B-AFC0-4210102A8DA7} 
-            Enabled         =   0   'False
-            Object.Visible         =   0   'False
-            Caption         =   "Fechar"
-            Key             =   "Fechar"
-            Object.ToolTipText     =   "Fechar"
-            Object.Tag             =   ""
-            ImageIndex      =   4
-         EndProperty
-      EndProperty
-      BorderStyle     =   1
-      OLEDropMode     =   1
-   End
-   Begin VB.CommandButton cmd_Buscar 
-      Height          =   375
-      Left            =   3000
-      Picture         =   "frm_CadastroTransacoes.frx":0A4E
-      Style           =   1  'Graphical
-      TabIndex        =   15
-      ToolTipText     =   "Busca Clentes"
-      Top             =   1080
-      Width           =   375
-   End
+   ScaleHeight     =   4980
+   ScaleWidth      =   7710
    Begin VB.TextBox txt_Data_Cadastro 
       Appearance      =   0  'Flat
       BackColor       =   &H8000000F&
@@ -128,40 +53,19 @@ Begin VB.Form frm_CadastroTransacoes
       Width           =   1215
    End
    Begin VB.Frame Frame1 
-      Height          =   4455
+      Height          =   3135
       Left            =   360
       TabIndex        =   4
-      Top             =   2160
+      Top             =   1560
       Width           =   6975
-      Begin VB.TextBox txt_Descricao 
-         Appearance      =   0  'Flat
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         Height          =   2325
-         Left            =   3240
-         MaxLength       =   255
-         MultiLine       =   -1  'True
-         ScrollBars      =   2  'Vertical
-         TabIndex        =   13
-         ToolTipText     =   "até 255 Caracteres."
-         Top             =   1200
-         Width           =   3015
-      End
       Begin VB.ComboBox cmbStatus 
          Height          =   315
-         ItemData        =   "frm_CadastroTransacoes.frx":0C81
+         ItemData        =   "frm_Relatorio.frx":0A4E
          Left            =   3240
-         List            =   "frm_CadastroTransacoes.frx":0C8E
+         List            =   "frm_Relatorio.frx":0A5B
          Style           =   2  'Dropdown List
-         TabIndex        =   12
-         Top             =   3720
+         TabIndex        =   11
+         Top             =   2640
          Width           =   2055
       End
       Begin VB.TextBox txt_Valor 
@@ -215,8 +119,8 @@ Begin VB.Form frm_CadastroTransacoes
          EndProperty
          Height          =   255
          Left            =   2160
-         TabIndex        =   11
-         Top             =   3840
+         TabIndex        =   10
+         Top             =   2760
          Width           =   975
       End
       Begin VB.Label Label4 
@@ -233,7 +137,7 @@ Begin VB.Form frm_CadastroTransacoes
          EndProperty
          Height          =   855
          Left            =   1920
-         TabIndex        =   9
+         TabIndex        =   8
          Top             =   1320
          Width           =   1215
       End
@@ -251,7 +155,7 @@ Begin VB.Form frm_CadastroTransacoes
          EndProperty
          Height          =   255
          Left            =   2160
-         TabIndex        =   10
+         TabIndex        =   9
          Top             =   840
          Width           =   975
       End
@@ -273,23 +177,37 @@ Begin VB.Form frm_CadastroTransacoes
          Width           =   1695
       End
    End
-   Begin VB.Label Label6 
-      Caption         =   "Atenção! Campos Obrigatórios (*)"
+   Begin VB.PictureBox ImageList1 
+      BackColor       =   &H80000005&
+      Height          =   480
+      Left            =   12360
+      ScaleHeight     =   420
+      ScaleWidth      =   1140
+      TabIndex        =   12
+      Top             =   3120
+      Width           =   1200
+   End
+   Begin VB.Label Lbl_Aviso 
+      Alignment       =   2  'Center
+      Appearance      =   0  'Flat
+      BackColor       =   &H80000005&
+      BorderStyle     =   1  'Fixed Single
+      Caption         =   "Acompanhamento Assistência Técnica"
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Name            =   "Tahoma"
+         Size            =   15.75
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      ForeColor       =   &H00FF0000&
-      Height          =   255
-      Left            =   4440
-      TabIndex        =   14
-      Top             =   1800
-      Width           =   3135
+      ForeColor       =   &H80000008&
+      Height          =   525
+      Left            =   0
+      TabIndex        =   13
+      Top             =   0
+      Width           =   17565
    End
    Begin VB.Label Label2 
       Alignment       =   1  'Right Justify
@@ -306,7 +224,7 @@ Begin VB.Form frm_CadastroTransacoes
       EndProperty
       Height          =   255
       Left            =   3480
-      TabIndex        =   8
+      TabIndex        =   7
       Top             =   1200
       Width           =   1575
    End
@@ -325,127 +243,36 @@ Begin VB.Form frm_CadastroTransacoes
       EndProperty
       Height          =   255
       Left            =   240
-      TabIndex        =   7
+      TabIndex        =   6
       Top             =   1200
       Width           =   1335
    End
-   Begin ComctlLib.ImageList ImageList1 
-      Left            =   12360
-      Top             =   3120
-      _ExtentX        =   1005
-      _ExtentY        =   1005
-      BackColor       =   -2147483643
-      ImageWidth      =   32
-      ImageHeight     =   32
-      MaskColor       =   12632256
-      UseMaskColor    =   0   'False
-      _Version        =   327682
-      BeginProperty Images {0713E8C2-850A-101B-AFC0-4210102A8DA7} 
-         NumListImages   =   5
-         BeginProperty ListImage1 {0713E8C3-850A-101B-AFC0-4210102A8DA7} 
-            Picture         =   "frm_CadastroTransacoes.frx":0CBD
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage2 {0713E8C3-850A-101B-AFC0-4210102A8DA7} 
-            Picture         =   "frm_CadastroTransacoes.frx":1BD3
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage3 {0713E8C3-850A-101B-AFC0-4210102A8DA7} 
-            Picture         =   "frm_CadastroTransacoes.frx":2425
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage4 {0713E8C3-850A-101B-AFC0-4210102A8DA7} 
-            Picture         =   "frm_CadastroTransacoes.frx":31F7
-            Key             =   ""
-         EndProperty
-         BeginProperty ListImage5 {0713E8C3-850A-101B-AFC0-4210102A8DA7} 
-            Picture         =   "frm_CadastroTransacoes.frx":3F49
-            Key             =   ""
-         EndProperty
-      EndProperty
-   End
 End
-Attribute VB_Name = "frm_CadastroTransacoes"
+Attribute VB_Name = "frm_Relatorio"
 Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 
 
-
-
-Private Sub cmd_Buscar_Click()
-On Error GoTo TratamentoDeErro
-
-    frmLocalizar.lstTitulo.List(0) = "Id_Transacao"
-    frmLocalizar.lstTitulo.List(1) = "Descricao"
-    frmLocalizar.lstTitulo.List(2) = "Numero_Cartao"
-    frmLocalizar.lstTitulo.List(3) = "Status"
-    frmLocalizar.lstCampo.List(0) = "Id_Transacao"
-    frmLocalizar.lstCampo.List(1) = "Descricao"
-    frmLocalizar.lstCampo.List(2) = "Numero_Cartao"
-    frmLocalizar.lstCampo.List(3) = "Status"
-    frmLocalizar.txtTabela.Text = "tb_Transacoes"
-    frmLocalizar.lstOrdem.List(0) = "Id_Transacao"
-    frmLocalizar.lstRetorna.List(0) = "0"
-    frmLocalizar.FMontaChave
-    frmLocalizar.Caption = " Buscar Transações"
-    frmLocalizar.Show 1
-    If WxRetorno(0) <> Empty Then
-        txt_CodTransacao.Text = WxRetorno(0)
-        Call txt_CodTransacao_LostFocus
+Private Sub flxUsuarios_Click()
+If flxUsuarios.Rows > 1 And Wval(flxUsuarios.TextMatrix(flxUsuarios.RowSel, 2)) > 0 Then
+    txt_Cod.Text = Wval(flxUsuarios.TextMatrix(flxUsuarios.RowSel, 2))
+    txt_Nome = flxUsuarios.TextMatrix(flxUsuarios.RowSel, 3) & ""
+    txt_Data_Cadastro = Format(flxUsuarios.TextMatrix(flxUsuarios.RowSel, 4), "dd/mm/yyyy") & ""
+    txt_Usuario = flxUsuarios.TextMatrix(flxUsuarios.RowSel, 5) & ""
+    txt_Senha = flxUsuarios.TextMatrix(flxUsuarios.RowSel, 6) & ""
+    If Wval(flxUsuarios.TextMatrix(flxUsuarios.RowSel, 7)) = 1 Then
+        chk_Adm.Value = 1
+    Else
+        chk_Adm.Value = 0
     End If
-    
-     
-    
-Exit Sub
-TratamentoDeErro:
-    ' Monta a mensagem de log com detalhes do erro
-    Dim strErroDetails As String
-    strErroDetails = "Erro na rotina MinhaRotinaQuePodeGerarErro - " & _
-                     "Número: " & Err.Number & " | " & _
-                     "Descrição: " & Err.Description & " | " & _
-                     "Fonte: " & Err.Source & " | " & _
-                     "ÚltimaDLL: " & Err.HelpFile & " | " & _
-                     "Contexto: Linha do erro/Estado da aplicação" ' Adicione contexto se possível
-
-    ' Chama a rotina de log do módulo1
-    Call EscreverLogErro(strErroDetails)
-
-    ' Opcional: Avisar o usuário de forma amigável (sem mostrar detalhes técnicos)
-    MsgBox "Ocorreu um erro inesperado. O problema foi registrado e será investigado.", vbCritical, "Erro"
-
+End If
 End Sub
 
-
-
 Private Sub Form_Load()
-On Error GoTo TratamentoDeErro
-
-
     Me.Caption = "XYZ - Administradora de Cartões de Crédito - " + Me.Caption
     Call fLimparCampos
-    
-    
-    
-    
-Exit Sub
-TratamentoDeErro:
-    ' Monta a mensagem de log com detalhes do erro
-    Dim strErroDetails As String
-    strErroDetails = "Erro na rotina MinhaRotinaQuePodeGerarErro - " & _
-                     "Número: " & Err.Number & " | " & _
-                     "Descrição: " & Err.Description & " | " & _
-                     "Fonte: " & Err.Source & " | " & _
-                     "ÚltimaDLL: " & Err.HelpFile & " | " & _
-                     "Contexto: Linha do erro/Estado da aplicação" ' Adicione contexto se possível
-
-    ' Chama a rotina de log do módulo1
-    Call EscreverLogErro(strErroDetails)
-
-    ' Opcional: Avisar o usuário de forma amigável (sem mostrar detalhes técnicos)
-    MsgBox "Ocorreu um erro inesperado. O problema foi registrado e será investigado.", vbCritical, "Erro"
-
 End Sub
 
 Private Sub Toolbar1_ButtonClick(ByVal Button As ComctlLib.Button)
@@ -553,14 +380,82 @@ Private Function fLimparCampos()
 
     txt_Data_Cadastro = Format(CDate(Now), "dd/mm/yyyy hh:nn:ss")
     txt_CodTransacao.Text = ""
-    txt_NumeroCartao.Text = Empty
-    txt_Valor.Text = 0
+    txt_NumeroCartao.Text = ""
+    txt_Valor.Text = ""
     txt_Descricao.Text = ""
     cmbStatus.ListIndex = 0
     
+
+
+    'Call fFormatarGradeUsuarios
+    'Call fCarregaDadosGrade
 End Function
 
 
+Private Function fCarregaDadosGrade()
+Dim db As New ADODB.Connection
+Dim rs As New ADODB.Recordset
+Dim i As Integer
+
+Dim lTimer As Long
+
+Screen.MousePointer = vbHourglass
+
+flxUsuarios.Refresh
+lTimer = Timer
+
+flxUsuarios.Visible = False
+
+
+rs.Open "Select '' as sel1,'' as sel2, codigo as Codigo, Nome as Nome,Data_Cadastro as Data_Cadastro, Usuario as Usuario,Senha as Senha,Adm as Adm  from tb_Usuarios ORDER BY Codigo asc", cn, 3, 3
+If Not rs.EOF Then
+    rs.MoveFirst
+
+    'define o numero de linhas e colunas e configura o grid
+    flxUsuarios.Rows = rs.RecordCount + 1
+    flxUsuarios.Row = 1
+    flxUsuarios.Col = 0
+    flxUsuarios.RowSel = flxUsuarios.Rows - 1
+    flxUsuarios.ColSel = flxUsuarios.Cols - 1
+
+    'estamos usando a propriedade Clip e o método GetString para selecionar uma região do grid
+    flxUsuarios.Clip = rs.GetString(adClipString, -1, Chr(9), Chr(13), vbNullString)
+    flxUsuarios.Row = 1
+    flxUsuarios.Visible = True
+End If
+'libera os objetos
+Set rs = Nothing
+Set db = Nothing
+
+Screen.MousePointer = vbDefault
+
+End Function
+
+Private Function fFormatarGradeUsuarios()
+Dim i As Integer
+
+With flxUsuarios
+    .Clear
+    .Rows = 2
+    .Cols = 8
+
+    .FormatString = "||>Código.|<Nome|^Dt.Cadastro|<Usuario|>Senha|>Adm"
+
+    For i = 0 To .Cols - 1
+        .Row = 0
+        .Col = i
+        .CellFontBold = True
+    Next i
+ .ColWidth(0) = 200
+ .ColWidth(1) = 0
+ .ColWidth(2) = 900
+ .ColWidth(3) = 2500
+ .ColWidth(4) = 0
+ .ColWidth(5) = 2500
+ .ColWidth(6) = 0
+ .ColWidth(7) = 0
+End With
+End Function
 
 
 Private Function fGravar()
@@ -574,10 +469,10 @@ On Error GoTo TratamentoDeErro
         rs.Open SQL, cn, 3, 3
         If rs.EOF Then
             rs.AddNew
-            rs!numero_cartao = Mid(txt_NumeroCartao.Text, 1, 16) & ""
+            rs!Numero_Cartao = Mid(txt_NumeroCartao.Text, 1, 16) & ""
             rs!Data_Transacao = Format(CDate(Now), "dd/mm/yyyy hh:nn:ss")
             rs!Valor_Transacao = (txt_Valor.Text) & ""
-            rs!descricao = Mid(txt_Descricao.Text, 1, 255) & ""
+            rs!Descricao = Mid(txt_Descricao.Text, 1, 255) & ""
             rs!Status = cmbStatus.ListIndex
             rs.Update
             rs.Close
@@ -598,10 +493,10 @@ On Error GoTo TratamentoDeErro
         ElseIf Not rs.EOF Then
         
             If rs!Status <> 0 Then
-                rs!numero_cartao = Mid(txt_NumeroCartao.Text, 1, 16) & ""
+                rs!Numero_Cartao = Mid(txt_NumeroCartao.Text, 1, 16) & ""
                 rs!Data_Transacao = Format(CDate(Now), "dd/mm/yyyy hh:nn:ss")
                 rs!Valor_Transacao = (txt_Valor.Text) & ""
-                rs!descricao = Mid(txt_Descricao.Text, 1, 255) & ""
+                rs!Descricao = Mid(txt_Descricao.Text, 1, 255) & ""
                 rs!Status = cmbStatus.ListIndex
                 rs.Update
                 rs.Close
@@ -666,45 +561,6 @@ End If
 End Function
 
 
-
-
-Private Sub txt_CodTransacao_KeyPress(KeyAscii As Integer)
-   If Index = 0 Then
-      If KeyAscii <> 8 And KeyAscii <> 46 Then
-          If KeyAscii < 48 Or KeyAscii > 57 Then KeyAscii = 0
-      End If
-   End If
-End Sub
-
-Private Sub txt_CodTransacao_LostFocus()
-
-
-On Error GoTo TratamentoDeErro
-
-    Call fCarregarDados(Wval(txt_CodTransacao))
-    
-    
-Exit Sub
-TratamentoDeErro:
-    ' Monta a mensagem de log com detalhes do erro
-    Dim strErroDetails As String
-    strErroDetails = "Erro na rotina MinhaRotinaQuePodeGerarErro - " & _
-                     "Número: " & Err.Number & " | " & _
-                     "Descrição: " & Err.Description & " | " & _
-                     "Fonte: " & Err.Source & " | " & _
-                     "ÚltimaDLL: " & Err.HelpFile & " | " & _
-                     "Contexto: Linha do erro/Estado da aplicação" ' Adicione contexto se possível
-
-    ' Chama a rotina de log do módulo1
-    Call EscreverLogErro(strErroDetails)
-
-    ' Opcional: Avisar o usuário de forma amigável (sem mostrar detalhes técnicos)
-    MsgBox "Ocorreu um erro inesperado. O problema foi registrado e será investigado.", vbCritical, "Erro"
-
-
-
-End Sub
-
 Private Sub txt_NumeroCartao_KeyPress(KeyAscii As Integer)
  ' Permite apenas números (0-9), Backspace (8) e Delete (127 - raramente usado no KeyPress)
     If Not (KeyAscii >= vbKey0 And KeyAscii <= vbKey9) And KeyAscii <> vbKeyBack Then
@@ -763,35 +619,3 @@ Private Sub txt_Valor_LostFocus()
     End If
 
 End Sub
-
-Private Function fCarregarDados(nCod As Integer)
-Dim rs As New ADODB.Recordset
-Dim SQL As String
-
-
-            
-''''Transações
-SQL = "select * from tb_Transacoes where id_transacao = " & Wval(nCod)
-rs.Open SQL, cn, adOpenStatic, adLockReadOnly
-If Not rs.EOF Then
-    txt_Data_Cadastro = Format(CDate(rs!Data_Transacao), "dd/mm/yyyy hh:nn:ss")
-    txt_Descricao.Text = rs!descricao & ""
-
-    If (rs!Status = "0") Then
-        cmbStatus.ListIndex = 0
-    ElseIf (rs!Status = "1") Then
-        cmbStatus.ListIndex = 1
-    Else
-        cmbStatus.ListIndex = 2
-    End If
-    txt_NumeroCartao = Trim(Str(rs!numero_cartao))
-    txt_Valor = Wval(rs!Valor_Transacao)
-
-Else
-    MsgBox "Nenhum registro foi Encontrado! Verifique!", vbInformation, "Atenção."
-    Call fLimparCampos
-    Exit Function
-End If
-
-
-End Function
