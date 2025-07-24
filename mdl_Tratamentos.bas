@@ -1,7 +1,8 @@
 Attribute VB_Name = "mdl_Tratamentos"
-
+ '' Módulo de Tratamentos
+ 
 Function Wval(WxVariante As Variant) As Double
-'   On Error GoTo ErroFuncao
+    '' Função para tratar campos numéricos
 
    Dim WxRetorno As String
    Dim WnPosicao As Integer
@@ -19,6 +20,7 @@ Function Wval(WxVariante As Variant) As Double
         Wval = Val(WxRetorno)
     End If
    Exit Function
+   
 ErroFuncao:
    MsgBox "Ocorreu um erro durante a transformação do campo " & vbCrLf & Err & vbCrLf & Error, 16, "Função Wval"
    

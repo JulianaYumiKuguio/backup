@@ -134,7 +134,7 @@ Begin VB.Form frmLocalizar
          Enabled         =   0   'False
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   8.25
+            Size            =   9.75
             Charset         =   0
             Weight          =   700
             Underline       =   0   'False
@@ -142,14 +142,14 @@ Begin VB.Form frmLocalizar
             Strikethrough   =   0   'False
          EndProperty
          Height          =   320
-         Left            =   7680
+         Left            =   7560
          MaxLength       =   20
          MultiLine       =   -1  'True
          TabIndex        =   1
-         Text            =   "frmLocalizar.frx":0A4E
-         Top             =   35
+         Text            =   "frmLocalizar.frx":1084A
+         Top             =   0
          Visible         =   0   'False
-         Width           =   1695
+         Width           =   3735
       End
    End
    Begin MSDataGridLib.DataGrid DataGrid1 
@@ -167,21 +167,21 @@ Begin VB.Form frmLocalizar
       Enabled         =   -1  'True
       ColumnHeaders   =   -1  'True
       HeadLines       =   1
-      RowHeight       =   19
+      RowHeight       =   24
       WrapCellPointer =   -1  'True
       RowDividerStyle =   6
       BeginProperty HeadFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "MS Sans Serif"
-         Size            =   8.25
+         Size            =   9.75
          Charset         =   0
-         Weight          =   400
+         Weight          =   700
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
          Name            =   "MS Sans Serif"
-         Size            =   9.75
+         Size            =   12
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -219,8 +219,6 @@ Begin VB.Form frmLocalizar
       SplitCount      =   1
       BeginProperty Split0 
          MarqueeStyle    =   3
-         AllowRowSizing  =   -1  'True
-         AllowSizing     =   -1  'True
          BeginProperty Column00 
          EndProperty
          BeginProperty Column01 
@@ -242,7 +240,7 @@ Begin VB.Form frmLocalizar
          Appearance      =   0  'Flat
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   9.75
+            Size            =   12
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -250,83 +248,119 @@ Begin VB.Form frmLocalizar
             Strikethrough   =   0   'False
          EndProperty
          Height          =   405
-         Left            =   3600
+         Left            =   3720
          TabIndex        =   27
-         Top             =   240
+         Top             =   360
          Width           =   4815
       End
       Begin VB.ComboBox cmbColuna 
          Appearance      =   0  'Flat
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   9.75
+            Size            =   12
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   360
+         Height          =   420
          Left            =   180
          Sorted          =   -1  'True
          Style           =   2  'Dropdown List
          TabIndex        =   22
-         Top             =   270
+         Top             =   390
          Width           =   2265
       End
       Begin VB.ComboBox cmbCondicao 
          Appearance      =   0  'Flat
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   9.75
+            Size            =   12
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         Height          =   360
+         Height          =   420
          Left            =   2535
          Style           =   2  'Dropdown List
          TabIndex        =   21
-         Top             =   270
+         Top             =   390
          Width           =   975
       End
       Begin VB.CommandButton cmdFiltra 
          Caption         =   "Filtrar"
          Enabled         =   0   'False
-         Height          =   285
-         Left            =   8505
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   12
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   405
+         Left            =   8625
          TabIndex        =   20
-         Top             =   285
-         Width           =   960
+         Top             =   360
+         Width           =   1080
       End
       Begin VB.Label Label2 
          AutoSize        =   -1  'True
          Caption         =   "Filtrar Coluna"
-         Height          =   195
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   12
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   300
          Left            =   210
          TabIndex        =   25
          Top             =   45
-         Width           =   915
+         Width           =   1410
       End
       Begin VB.Label Label3 
          AutoSize        =   -1  'True
          Caption         =   "Condição"
-         Height          =   195
-         Left            =   2565
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   12
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   300
+         Left            =   2445
          TabIndex        =   24
          Top             =   45
-         Width           =   675
+         Width           =   1245
       End
       Begin VB.Label Label4 
          AutoSize        =   -1  'True
          Caption         =   "Conteúdo"
-         Height          =   195
-         Left            =   3555
+         BeginProperty Font 
+            Name            =   "MS Sans Serif"
+            Size            =   12
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   300
+         Left            =   3675
          TabIndex        =   23
          Top             =   45
-         Width           =   690
+         Width           =   1050
       End
    End
    Begin VB.Data dtaDados 
@@ -356,9 +390,9 @@ Begin VB.Form frmLocalizar
    End
    Begin VB.ListBox lstOrdem 
       Height          =   645
-      ItemData        =   "frmLocalizar.frx":0A62
+      ItemData        =   "frmLocalizar.frx":1085E
       Left            =   4950
-      List            =   "frmLocalizar.frx":0A64
+      List            =   "frmLocalizar.frx":10860
       TabIndex        =   13
       Top             =   5175
       Visible         =   0   'False
@@ -366,9 +400,9 @@ Begin VB.Form frmLocalizar
    End
    Begin VB.ListBox lstTitulo 
       Height          =   645
-      ItemData        =   "frmLocalizar.frx":0A66
+      ItemData        =   "frmLocalizar.frx":10862
       Left            =   120
-      List            =   "frmLocalizar.frx":0A68
+      List            =   "frmLocalizar.frx":10864
       TabIndex        =   12
       Top             =   7200
       Visible         =   0   'False
@@ -502,39 +536,39 @@ Begin VB.Form frmLocalizar
       BeginProperty Images {0713E8C2-850A-101B-AFC0-4210102A8DA7} 
          NumListImages   =   9
          BeginProperty ListImage1 {0713E8C3-850A-101B-AFC0-4210102A8DA7} 
-            Picture         =   "frmLocalizar.frx":0A6A
+            Picture         =   "frmLocalizar.frx":10866
             Key             =   ""
          EndProperty
          BeginProperty ListImage2 {0713E8C3-850A-101B-AFC0-4210102A8DA7} 
-            Picture         =   "frmLocalizar.frx":0C3C
+            Picture         =   "frmLocalizar.frx":10A38
             Key             =   ""
          EndProperty
          BeginProperty ListImage3 {0713E8C3-850A-101B-AFC0-4210102A8DA7} 
-            Picture         =   "frmLocalizar.frx":0D82
+            Picture         =   "frmLocalizar.frx":10B7E
             Key             =   ""
          EndProperty
          BeginProperty ListImage4 {0713E8C3-850A-101B-AFC0-4210102A8DA7} 
-            Picture         =   "frmLocalizar.frx":0E9C
+            Picture         =   "frmLocalizar.frx":10C98
             Key             =   ""
          EndProperty
          BeginProperty ListImage5 {0713E8C3-850A-101B-AFC0-4210102A8DA7} 
-            Picture         =   "frmLocalizar.frx":0FB6
+            Picture         =   "frmLocalizar.frx":10DB2
             Key             =   ""
          EndProperty
          BeginProperty ListImage6 {0713E8C3-850A-101B-AFC0-4210102A8DA7} 
-            Picture         =   "frmLocalizar.frx":10C8
+            Picture         =   "frmLocalizar.frx":10EC4
             Key             =   ""
          EndProperty
          BeginProperty ListImage7 {0713E8C3-850A-101B-AFC0-4210102A8DA7} 
-            Picture         =   "frmLocalizar.frx":11DA
+            Picture         =   "frmLocalizar.frx":10FD6
             Key             =   ""
          EndProperty
          BeginProperty ListImage8 {0713E8C3-850A-101B-AFC0-4210102A8DA7} 
-            Picture         =   "frmLocalizar.frx":12EC
+            Picture         =   "frmLocalizar.frx":110E8
             Key             =   ""
          EndProperty
          BeginProperty ListImage9 {0713E8C3-850A-101B-AFC0-4210102A8DA7} 
-            Picture         =   "frmLocalizar.frx":13FE
+            Picture         =   "frmLocalizar.frx":111FA
             Key             =   ""
          EndProperty
       EndProperty
@@ -662,6 +696,13 @@ Function FMontaChave()
     'Verifica se Usuario selecionou Filtro Proprio;
     If txtCondicaoUsu <> Empty Then
         If txtCondicao.Text = Empty Then
+        
+            If InStr(1, txtCondicaoUsu.Text, "replace(CONVERT(NUMERIC(18, 2), Valor_Transacao ),'.',',')", vbTextCompare) > 0 Then
+            
+                txtCondicaoUsu.Text = Replace(txtCondicaoUsu.Text, "replace(CONVERT(NUMERIC(18, 2), Valor_Transacao ),'.',',')", "Valor_Transacao")
+            
+            End If
+        
             sSelecao = sSelecao & " Where " & txtCondicaoUsu.Text
         Else
             sSelecao = sSelecao & " And " & txtCondicaoUsu.Text
@@ -760,6 +801,8 @@ End Sub
 
 
 
+
+
 Private Sub cmdFechar_Click()
                 
     tobLocalizar.Buttons(9).Value = 0
@@ -799,7 +842,14 @@ Private Sub cmdFiltra_Click()
                 If (VarType(Wval(Replace(txtconteudo.Text, """", "")))) = vbInteger Then
                     txtCondicaoUsu.Text = lstCampo.List(i) & " " & cmbCondicao.Text & " " & txtconteudo
                 ElseIf (VarType(Wval(Replace(txtconteudo.Text, """", "")))) = vbDouble Then
-                    txtCondicaoUsu.Text = lstCampo.List(i) & " " & cmbCondicao.Text & " " & txtconteudo
+                    'txtCondicaoUsu.Text = lstCampo.List(i) & " " & cmbCondicao.Text & " " & txtconteudo
+                    
+                    If lstCampo.List(i) = "CAST(Valor_Transacao AS VARCHAR(20))" Then
+                        txtCondicaoUsu.Text = lstCampo.List(i) & " " & cmbCondicao.Text & " " & txtconteudo
+                        If lstCampo.List(i) = "CAST(Valor_Transacao AS VARCHAR(20))" Then lstCampo.List(i) = "Valor_Transacao"
+                    Else
+                         txtCondicaoUsu.Text = lstCampo.List(i) & " " & cmbCondicao.Text & " " & "'" & txtconteudo & "'"
+                    End If
                 End If
             
             ElseIf (VarType(txtconteudo.Text)) = vbString Then
@@ -986,6 +1036,14 @@ End Sub
 
 Private Sub txtConteudo_Change()
     cmdFiltra.Enabled = True
+    
+    
+End Sub
+
+
+
+Private Sub txtconteudo_LostFocus()
+    txtconteudo = Replace(txtconteudo, ",", ".")
 End Sub
 
 Private Sub txtPalavra_Change()

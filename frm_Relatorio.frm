@@ -2,7 +2,7 @@ VERSION 5.00
 Begin VB.Form frm_Relatorio 
    BackColor       =   &H00FFFFFF&
    BorderStyle     =   1  'Fixed Single
-   Caption         =   "Relatório Transações"
+   Caption         =   "Relatório de Transações"
    ClientHeight    =   4980
    ClientLeft      =   3750
    ClientTop       =   3195
@@ -60,9 +60,9 @@ Begin VB.Form frm_Relatorio
       Width           =   6975
       Begin VB.ComboBox cmbStatus 
          Height          =   315
-         ItemData        =   "frm_Relatorio.frx":0A4E
+         ItemData        =   "frm_Relatorio.frx":1084A
          Left            =   3240
-         List            =   "frm_Relatorio.frx":0A5B
+         List            =   "frm_Relatorio.frx":10857
          Style           =   2  'Dropdown List
          TabIndex        =   11
          Top             =   2640
@@ -187,28 +187,6 @@ Begin VB.Form frm_Relatorio
       Top             =   3120
       Width           =   1200
    End
-   Begin VB.Label Lbl_Aviso 
-      Alignment       =   2  'Center
-      Appearance      =   0  'Flat
-      BackColor       =   &H80000005&
-      BorderStyle     =   1  'Fixed Single
-      Caption         =   "Acompanhamento Assistência Técnica"
-      BeginProperty Font 
-         Name            =   "Tahoma"
-         Size            =   15.75
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      ForeColor       =   &H80000008&
-      Height          =   525
-      Left            =   0
-      TabIndex        =   13
-      Top             =   0
-      Width           =   17565
-   End
    Begin VB.Label Label2 
       Alignment       =   1  'Right Justify
       BackStyle       =   0  'Transparent
@@ -254,21 +232,6 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 
-
-Private Sub flxUsuarios_Click()
-If flxUsuarios.Rows > 1 And Wval(flxUsuarios.TextMatrix(flxUsuarios.RowSel, 2)) > 0 Then
-    txt_Cod.Text = Wval(flxUsuarios.TextMatrix(flxUsuarios.RowSel, 2))
-    txt_Nome = flxUsuarios.TextMatrix(flxUsuarios.RowSel, 3) & ""
-    txt_Data_Cadastro = Format(flxUsuarios.TextMatrix(flxUsuarios.RowSel, 4), "dd/mm/yyyy") & ""
-    txt_Usuario = flxUsuarios.TextMatrix(flxUsuarios.RowSel, 5) & ""
-    txt_Senha = flxUsuarios.TextMatrix(flxUsuarios.RowSel, 6) & ""
-    If Wval(flxUsuarios.TextMatrix(flxUsuarios.RowSel, 7)) = 1 Then
-        chk_Adm.Value = 1
-    Else
-        chk_Adm.Value = 0
-    End If
-End If
-End Sub
 
 Private Sub Form_Load()
     Me.Caption = "XYZ - Administradora de Cartões de Crédito - " + Me.Caption
@@ -378,17 +341,13 @@ End Function
 
 Private Function fLimparCampos()
 
-    txt_Data_Cadastro = Format(CDate(Now), "dd/mm/yyyy hh:nn:ss")
-    txt_CodTransacao.Text = ""
-    txt_NumeroCartao.Text = ""
-    txt_Valor.Text = ""
-    txt_Descricao.Text = ""
-    cmbStatus.ListIndex = 0
+'    txt_Data_Cadastro = Format(CDate(Now), "dd/mm/yyyy hh:nn:ss")
+'    txt_CodTransacao.Text = ""
+'    txt_NumeroCartao.Text = ""
+'    txt_Valor.Text = ""
+'    cmbStatus.ListIndex = 0
     
 
-
-    'Call fFormatarGradeUsuarios
-    'Call fCarregaDadosGrade
 End Function
 
 
